@@ -6,6 +6,7 @@ console.log(uninitialized); // 결과값 < 빈칸 >
 const apple = "사과";
 apple = "바나나"; // TypeError: Assignment to constant variable
 console.log(apple);
+//const로 변수를 선언하면 값을 재할당 할 수 없습니다.
 
 
 let lotto = [3, 8, 13, 19, 21, 32];

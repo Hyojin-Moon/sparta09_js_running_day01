@@ -22,7 +22,7 @@ function deepCopy(object) {
     }
     
     return copy;
-}
+};
 
 const userBCart = deepCopy(userACart);
 //const userBCart = Object.assign({}, userACart);
@@ -35,4 +35,5 @@ applyCoupon(userBCart, coupon);
 //2. A를 B에 할당하면서 같은 값을 참조(주소값)하게 되었습니다.
 /*3. 참조형 데이터이기 때문에 B의 값을 변경할 경우 A도 변경됩니다.
     따라서 깊은 복사를 해서 독립적으로 만들어줘야 합니다.
+    JSON.parse(JSON.stringify()), structuredClone
 */

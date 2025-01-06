@@ -1,11 +1,22 @@
 const scores = [36, 62, 72, 55, 86, 95, 92, 48, 81];
 
+function calculator(num1, operator, num2) {
+  if (operator === "+") {
+    return num1 + num2;
+  } else if (operator === "-") {
+    return num1 - num2;
+  } else if(operator === "*") {
+    return num1 * num2;
+  } else if (operator === "/") {
+    return num1 / num2;
+  } 
+}
+
 function modify(scores) {
-  const temp = [];
-  for(let i = 0; i < scores.length; i++){
-    temp.push(scores[i] += 3);
-  }
-  return temp;
+  const newScores = scores.forEach((item, index) => {
+    scores[index] = calculator(item, "+", 3);
+  });
+  return newScores;
 }
 
 modify(scores);
